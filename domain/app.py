@@ -20,6 +20,7 @@ html_path = "../static/html/"
 
 app = Bottle()
 prob = Prob()
+filemanager.create_save_dir()
 
 @app.route('/')
 def index_html():

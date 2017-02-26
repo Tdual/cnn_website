@@ -5,7 +5,8 @@ from filemanager import get_save_path
 from log import log_debug
 
 def get_facerect(CVimage):
-    cascade_path = '/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml'
+    #cascade_path = '/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt.xml'
+    cascade_path = '/usr/local/share/OpenCV/haarcascades/haarcascade_frontalface_alt2.xml'
     cascade = cv2.CascadeClassifier(cascade_path)
     image_gray = cv2.cvtColor(CVimage, cv2.COLOR_BGR2GRAY)
     facerect = cascade.detectMultiScale(image_gray, scaleFactor=1.2, minNeighbors=2, minSize=(10, 10))

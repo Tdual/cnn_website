@@ -46,6 +46,12 @@ def upload_file(files):
         }
     return res
 
+def create_save_dir(path="var/tmp"):
+    abs_path = os.path.join(os.getcwd(),path)
+    if not os.path.exists(abs_path):
+        os.makedirs(abs_path)
+
+
 def get_save_path(id):
     save_path = os.path.join(os.getcwd(), "var/tmp", id)
     return save_path

@@ -17,7 +17,7 @@ def put_response(data, status=200, content_type="application/json"):
             status = 500
         if "http_status" in data and data["http_status"]:
             status = data["http_status"]
-        with open("etc/errorMapping.json","r") as f:
+        with open("../etc/errorMapping.json","r") as f:
             mapping_json = json.load(f)
             if "code" in data:
                 code = data["code"]
